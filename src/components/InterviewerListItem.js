@@ -1,6 +1,6 @@
 import React from "react";
-import "components/InterviewListItem.scss";
-const classNames = require('classnames')
+import "components/InterviewerListItem.scss";
+import classNames from "classnames";
 
 export default function InterviewListItem(props) {
     let interviewerItemClass = classNames({
@@ -19,7 +19,7 @@ export default function InterviewListItem(props) {
                 src={props.avatar}
                 alt={props.name}
             />
-            {props.name}
+            {props.selected && props.name}
         </li>
     );
 };
